@@ -28,8 +28,4 @@ app.use("/api/clientes", autenticacion, clientesRouter);
 // Middleware para manejo de errores
 app.use(errorHandler);
 
-app.listen(3001, () => {
-  console.log("Servidor iniciado en el puerto 3001");
-});
-
 module.exports = app;
