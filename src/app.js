@@ -23,8 +23,9 @@ const clientesRouter = require("./routes/clientes");
 
 //Configuramos el middleware de autenticacion
 app.use("/api/libros", autenticacion,  librosRouter);
-app.use(errorHandler);
 app.use("/api/clientes", autenticacion, clientesRouter);
+
+// Middleware para manejo de errores
 app.use(errorHandler);
 
 app.listen(3001, () => {
